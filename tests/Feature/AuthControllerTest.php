@@ -90,5 +90,7 @@ class AuthControllerTest extends TestCase
             ->assertStatus(Response::HTTP_OK);
 
         $this->assertEquals('Logged out', $response->original['message']);
+
+        $this->assertNotEmpty($response->original['message']);
     }
 }
